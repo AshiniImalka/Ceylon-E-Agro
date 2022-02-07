@@ -1,0 +1,22 @@
+#Application Config------------------------------------------
+server:
+   port: 8081
+   servlet:
+    context-path: /ceylon-e-agro
+
+spring:
+ application:
+  name: Ceylon E Agro
+ datasource:
+     url: jdbc:postgresql://ec2-3-212-143-188.compute-1.amazonaws.com:5432/dbla5n3qrcf5am
+     username: rgzlayunhmjzmu
+     password: 4862eb22efbd3054e330140b061fea249f6f37ceda3fa992f79ffa8750c9e18d
+ jpa:
+   hibernate.ddl-auto: update
+   generate-ddl: true
+   show-sql: true
+#Rest Template Configuration---------------------------------
+rest-template:
+  default:
+    time-out: 5000
+#------------------------------------------------------------
