@@ -30,7 +30,7 @@ public class SolutionController {
 
         SolutionsResponse response=solutionService.getSolutionList(page,limit,disease);
 
-        BaseResponse<SolutionsResponse> baseResponse = new BaseResponse<>(ApplicationStatus.GET_SOLUTION_LIST_SUCCESS, response);
+        BaseResponse<SolutionsResponse> baseResponse = new BaseResponse<>(ApplicationStatus.TOKEN_GENERATION_SUCCESS, response);
 
         return new ResponseEntity<>(baseResponse, HttpStatus.OK);
     }
