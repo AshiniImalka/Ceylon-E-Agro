@@ -7,7 +7,7 @@ import lombok.Data;
 public class SolutionResponse {
 
     @JsonProperty("solution_id")
-    private String solutionId;
+    private Long solutionId;
 
     @JsonProperty("solution_code")
     private String solutionCode;
@@ -22,5 +22,5 @@ public class SolutionResponse {
     private Integer rateScore;
 
     @JsonProperty("solution_type")
-    private Integer solutionType;
+    private String solutionType;
 }
