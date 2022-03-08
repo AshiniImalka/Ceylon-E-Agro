@@ -6,11 +6,8 @@ import lombok.Getter;
 public enum ApplicationStatus {
 
 
-    TOKEN_GENERATION_SUCCESS("S-000", "New user token generated."),
-    TOKEN_GENERATION_FAILED("F-000", "User token generation failed."),
-    USER_REGISTRATION_SUCCESS("S-001", "New user has been successfully created."),
-    USER_REGISTRATION_FAILED("F-001", "User registration failed.");
-
+    TOKEN_GENERATION_SUCCESS("S-000", "Solution List Fetched Succesfully."),
+    TOKEN_GENERATION_FAILED("F-000", "Solution List Fetched Failed.");
 
     private String code;
     private String message;
