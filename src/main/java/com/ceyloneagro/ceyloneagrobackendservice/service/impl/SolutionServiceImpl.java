@@ -30,6 +30,7 @@ public class SolutionServiceImpl implements SolutionService {
 
         List<SolutionResponse> solutionResponse = new ArrayList<>();
         SolutionsResponse returnValue = new SolutionsResponse();
+        String diseaseDescription = null;
 
         if (page > 0)
             page = page - 1;
@@ -41,9 +42,11 @@ public class SolutionServiceImpl implements SolutionService {
 
         for (SolutionList entity : resource) {
             solutionResponse.add(mapper.map(entity, SolutionResponse.class));
+            returnValue.setDisease(entity.getDiseaseName());
+            returnValue.setDiseaseDescription(entity.getDiseaseDescription());
+
         }
 
-        returnValue.setDisease(disease);
         returnValue.setSolution(solutionResponse);
         returnValue.setCurrentPage(resourcePage.getNumber() + 1);
         returnValue.setTotalItems(resourcePage.getTotalElements());

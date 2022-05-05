@@ -7,8 +7,11 @@ import lombok.Data;
 
 public class SolutionsResponse<T> {
 
-   @JsonProperty("disease")
+    @JsonProperty("disease")
     private String disease;
+
+    @JsonProperty("diseaseDescription")
+    private String diseaseDescription;
 
     @JsonProperty("solution")
     private T solution;

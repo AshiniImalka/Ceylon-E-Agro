@@ -27,10 +27,13 @@ import javax.persistence.*;
         @Column(name = "disease_name", length = 100, nullable = false,updatable = true)
         private String diseaseName;
 
+        @Column(name = "disease_description", length = 1000, nullable = false,updatable = true)
+        private String diseaseDescription;
+
         @Column(name = "solution", length = 100, nullable = false, unique = true, updatable = true)
         private String solution;
 
-        @Column(name = "solution_description", length = 100, nullable = false, unique = true, updatable = true)
+        @Column(name = "solution_description", length = 1000, nullable = false, unique = true, updatable = true)
         private String solutionDescription;
 
         @Column(name = "solution_type", length = 100, nullable = false,updatable = true)
